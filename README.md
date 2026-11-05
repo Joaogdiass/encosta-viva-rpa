@@ -24,7 +24,7 @@ Robô de software da disciplina **Robotic Process Automation** (Global Solution 
 | **URL do MVP** | https://joaogdiass.github.io/encosta-viva-dados/ |
 | **Repositório de Automação** | https://github.com/Joaogdiass/encosta-viva-rpa |
 | **Repositório de Dados** | https://github.com/Joaogdiass/encosta-viva-dados |
-| **Vídeo** | A PREENCHER |
+| **Vídeo** | https://youtu.be/Mt9ooyc3j_0 |
 | **Indicadores de impacto** | Antecedência do alerta, moradores avisados por setor, sensores offline, falhas de envio |
 | **ODS** | 11 (meta 11.5), 13 (meta 13.1), 9, 10 e 3 |
 
