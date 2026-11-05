@@ -161,7 +161,7 @@ CORPO = f"""
 <table><tr><th>Item</th><th>Link</th></tr>
 <tr><td>Repositório GitHub</td><td>{link("REPO_URL")}</td></tr>
 <tr><td>Vídeo demonstrativo</td><td>{link("VIDEO_URL")}</td></tr>
-<tr><td>MVP</td><td><a href="https://joaogdiass.github.io/gs-bigdata/">https://joaogdiass.github.io/gs-bigdata/</a></td></tr></table>
+<tr><td>MVP</td><td><a href="https://joaogdiass.github.io/encosta-viva-dados/">https://joaogdiass.github.io/encosta-viva-dados/</a></td></tr></table>
 """
 
 pagina = f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Encosta Viva: robô de alertas</title><style>{CSS}</style></head><body>{CORPO}</body></html>'

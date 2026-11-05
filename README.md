@@ -21,9 +21,9 @@ Robô de software da disciplina **Robotic Process Automation** (Global Solution 
 | **Componente desta entrega** | Robô em Python: coleta, decisão, alertas, chamados, relatório diário e entrega ao MVP |
 | **Fontes de dados** | Open-Meteo (real), camada Ouro do pipeline de Dados, sensores, relatos e cadastro (simulados) |
 | **Modelos de IA** | Não usados neste componente: o nível vem de regras explicáveis |
-| **URL do MVP** | https://joaogdiass.github.io/gs-bigdata/ |
-| **Repositório de Automação** | https://github.com/Joaogdiass/gs-rpa |
-| **Repositório de Dados** | https://github.com/Joaogdiass/gs-bigdata |
+| **URL do MVP** | https://joaogdiass.github.io/encosta-viva-dados/ |
+| **Repositório de Automação** | https://github.com/Joaogdiass/encosta-viva-rpa |
+| **Repositório de Dados** | https://github.com/Joaogdiass/encosta-viva-dados |
 | **Vídeo** | A PREENCHER |
 | **Indicadores de impacto** | Antecedência do alerta, moradores avisados por setor, sensores offline, falhas de envio |
 | **ODS** | 11 (meta 11.5), 13 (meta 13.1), 9, 10 e 3 |
