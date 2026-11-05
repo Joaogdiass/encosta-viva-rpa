@@ -1,25 +1,25 @@
 $ py src/main.py ciclo
 # API no ar: chuva real do Open-Meteo.
 
-2026-11-05T12:07  modo=ao_vivo  status=concluido
-   S01 Vila Sahy          Observação -> Observação    sem envio 72h=22.6mm  fonte=open_meteo
-   S02 Morro da Oficina   Observação -> Atenção       ALERTA    72h=242.6mm  fonte=open_meteo
-   S03 Quitandinha        Observação -> Observação    sem envio 72h=20.0mm  fonte=open_meteo
-   S04 Jardim Ângela      Observação -> Atenção       ALERTA    72h=286.1mm  fonte=open_meteo
-   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=13.5mm  fonte=open_meteo
-  alertas_criados=2, decisao_igual=3, decisao_subiu=2, descartes=89, envios_ok=60, envios_sms=17, envios_telegram=24, envios_whatsapp=19, setores_processados=5
+2026-11-05T13:46  modo=ao_vivo  status=concluido
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=24.2mm  fonte=open_meteo
+   S02 Morro da Oficina   Observação -> Atenção       ALERTA    72h=241.1mm  fonte=open_meteo
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=22.1mm  fonte=open_meteo
+   S04 Jardim Ângela      Observação -> Atenção       ALERTA    72h=281.6mm  fonte=open_meteo
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=15.0mm  fonte=open_meteo
+  alertas_criados=2, decisao_igual=3, decisao_subiu=2, descartes=92, envios_ok=60, envios_sms=17, envios_telegram=24, envios_whatsapp=19, setores_processados=5
 
 [código de saída: 0]
 $ py src/main.py ciclo
 # API fora do ar: 3 tentativas, último valor com flag e aviso ao operador.
 
-2026-11-05T12:07  modo=ao_vivo  status=concluido_com_falhas
-   S01 Vila Sahy          Observação -> Observação    sem envio 72h=22.6mm  fonte=cache [dado desatualizado]
-   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=242.6mm  fonte=cache [dado desatualizado]
-   S03 Quitandinha        Observação -> Observação    sem envio 72h=20.0mm  fonte=cache [dado desatualizado]
-   S04 Jardim Ângela      Atenção -> Atenção       sem envio 72h=286.1mm  fonte=cache [dado desatualizado]
-   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=13.5mm  fonte=cache [dado desatualizado]
-  decisao_igual=5, descartes=89, setores_processados=5
+2026-11-05T13:46  modo=ao_vivo  status=concluido_com_falhas
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=24.2mm  fonte=cache [dado desatualizado]
+   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=241.1mm  fonte=cache [dado desatualizado]
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=22.1mm  fonte=cache [dado desatualizado]
+   S04 Jardim Ângela      Atenção -> Atenção       sem envio 72h=281.6mm  fonte=cache [dado desatualizado]
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=15.0mm  fonte=cache [dado desatualizado]
+  decisao_igual=5, descartes=92, setores_processados=5
   problema: API fora do ar após 3 tentativas; usando o último valor com flag de dado desatualizado
 [operador] incidente_aberto: API fora do ar após 3 tentativas; usando o último valor com flag de dado desatualizado
 
@@ -27,13 +27,13 @@ $ py src/main.py ciclo
 $ py src/main.py ciclo
 # API de volta: o incidente é fechado e o aviso de volta ao normal é registrado.
 
-2026-11-05T12:07  modo=ao_vivo  status=concluido
-   S01 Vila Sahy          Observação -> Observação    sem envio 72h=22.6mm  fonte=open_meteo
-   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=242.6mm  fonte=open_meteo
-   S03 Quitandinha        Observação -> Observação    sem envio 72h=20.0mm  fonte=open_meteo
-   S04 Jardim Ângela      Atenção -> Atenção       sem envio 72h=286.1mm  fonte=open_meteo
-   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=13.5mm  fonte=open_meteo
-  decisao_igual=5, descartes=89, setores_processados=5
+2026-11-05T13:47  modo=ao_vivo  status=concluido
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=24.2mm  fonte=open_meteo
+   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=241.1mm  fonte=open_meteo
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=22.1mm  fonte=open_meteo
+   S04 Jardim Ângela      Atenção -> Atenção       sem envio 72h=281.6mm  fonte=open_meteo
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=15.0mm  fonte=open_meteo
+  decisao_igual=5, descartes=92, setores_processados=5
 [operador] incidente_resolvido: fonte_open_meteo: voltou ao normal.
 
 [código de saída: 0]

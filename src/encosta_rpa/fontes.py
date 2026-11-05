@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from encosta_rpa.config import RAIZ
+from encosta_rpa.config import RAIZ, contexto_tls
 
 CHUVA_MAX_MM_H = 150.0
 FOLGA_LEITURA_FUTURA = timedelta(days=2)  # O arquivo do dia traz horas que ainda não aconteceram.
@@ -271,7 +271,7 @@ class OpenMeteo:
         })
         url = f"{self.cfg.open_meteo_url}?{consulta}"
         pedido = urllib.request.Request(url, headers={"User-Agent": "encosta-viva-rpa/1.0"})
-        with urllib.request.urlopen(pedido, timeout=15) as resposta:
+        with urllib.request.urlopen(pedido, timeout=15, context=contexto_tls()) as resposta:
             dados = json.loads(resposta.read())
         if not isinstance(dados.get("hourly", {}).get("time"), list):
             raise ValueError("resposta sem a lista de horas")

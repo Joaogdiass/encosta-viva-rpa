@@ -6,7 +6,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime
 
-from encosta_rpa.config import Config
+from encosta_rpa.config import Config, contexto_tls
 
 # Ordem de troca de canal depois de N falhas.
 CADEIA = {
@@ -61,7 +61,7 @@ class CanalTelegram:
         corpo = json.dumps({"chat_id": self.chat, "text": mensagem}).encode("utf-8")
         pedido = urllib.request.Request(self.url, data=corpo, headers={"Content-Type": "application/json"})
         try:
-            with urllib.request.urlopen(pedido, timeout=15) as resposta:
+            with urllib.request.urlopen(pedido, timeout=15, context=contexto_tls()) as resposta:
                 dados = json.loads(resposta.read())
         except urllib.error.HTTPError as erro:
             # Só o código: a URL carrega o token e não pode ir para o log.

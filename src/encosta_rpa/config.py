@@ -2,8 +2,11 @@
 from __future__ import annotations
 
 import os
+import ssl
 from dataclasses import dataclass, field
 from pathlib import Path
+
+import certifi
 
 RAIZ = Path(__file__).resolve().parents[2]
 URL_OPEN_METEO = "https://api.open-meteo.com/v1/forecast"
@@ -12,6 +15,11 @@ URL_TELEGRAM = "https://api.telegram.org"
 
 class ErroConfiguracao(Exception):
     """A configuração impede o robô de rodar com segurança."""
+
+
+def contexto_tls() -> ssl.SSLContext:
+    """Verifica certificados com o pacote certifi, para o resultado não depender do Windows da máquina."""
+    return ssl.create_default_context(cafile=certifi.where())
 
 
 def _ler_dotenv(caminho: Path) -> dict[str, str]:

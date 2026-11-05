@@ -78,6 +78,7 @@ CORPO = f"""
 <tr><td>SQLite</td><td>Tabelas <code>alertas</code>, <code>envios</code>, <code>chamados</code> e estado</td><td>Guarda o estado entre execuções e tem transações, sem precisar de servidor</td></tr>
 <tr><td>Open-Meteo</td><td>Chuva e previsão ao vivo</td><td>API pública, sem chave, já usada no componente de Dados</td></tr>
 <tr><td>fpdf2</td><td>Relatório diário</td><td>Gera PDF sem depender de programas instalados</td></tr>
+<tr><td>certifi e tzdata</td><td>HTTPS e fuso horário</td><td>O robô funciona igual em qualquer máquina, inclusive em uma instalação limpa do Windows</td></tr>
 <tr><td>pytest</td><td>Testes</td><td>Executa os cenários de sucesso, decisão e falha a cada mudança</td></tr>
 <tr><td>Telegram Bot API</td><td>Canal real opcional</td><td>Gratuito e simples de usar na demonstração</td></tr></table>
 
@@ -128,7 +129,7 @@ CORPO = f"""
 {imagem("mvp_alertas.png", "Figura 3. Tela do MVP lendo alertas.json depois do replay do evento simulado de 03/11/2026.", "80%")}
 
 <h2>10. Testes realizados</h2>
-<p>São <strong>36 testes automatizados, todos aprovados</strong> (<code>tests/evidencias/resultado_pytest.txt</code>). A queda da API e do Telegram é provocada com um servidor HTTP local. A saída abaixo vem de <code>scripts/demonstrar.py</code>.</p>
+<p>São <strong>38 testes automatizados, todos aprovados</strong> (<code>tests/evidencias/resultado_pytest.txt</code>). A queda da API e do Telegram é provocada com um servidor HTTP local. A saída abaixo vem de <code>scripts/demonstrar.py</code>.</p>
 <h3>Sucesso: dia sem chuva forte, nenhum envio</h3>
 {evidencia("cenario_sucesso.txt")}
 <h3>Decisão: evento de chuva no Jardim Ângela, de 15 em 15 minutos</h3>
