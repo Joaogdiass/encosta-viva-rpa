@@ -115,7 +115,7 @@ def carregar_ouro(cfg, ctx: Contexto) -> dict:
     try:
         if origem.startswith(("http://", "https://")):
             pedido = urllib.request.Request(origem, headers={"User-Agent": "encosta-viva-rpa/1.0"})
-            with urllib.request.urlopen(pedido, timeout=20) as resposta:
+            with urllib.request.urlopen(pedido, timeout=20, context=contexto_tls()) as resposta:
                 bruto = resposta.read().decode("utf-8")
         else:
             bruto = (RAIZ / origem).read_text(encoding="utf-8")  # Caminho absoluto substitui RAIZ.
