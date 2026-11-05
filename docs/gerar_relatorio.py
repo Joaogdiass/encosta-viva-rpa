@@ -11,11 +11,21 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[1]
 NAVEGADOR = os.environ.get("NAVEGADOR", r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 PENDENTE = '<mark>A PREENCHER antes da entrega</mark>'
+REPO_PADRAO = "https://github.com/Joaogdiass/encosta-viva-rpa"
+
+
+def ancora(url: str) -> str:
+    return f'<a href="{html.escape(url)}">{html.escape(url)}</a>'
 
 
 def link(variavel: str) -> str:
     url = os.environ.get(variavel, "")
-    return f'<a href="{html.escape(url)}">{html.escape(url)}</a>' if url else PENDENTE
+    return ancora(url) if url else PENDENTE
+
+
+def link_repo(caminho: str = "") -> str:
+    base = os.environ.get("REPO_URL", REPO_PADRAO).rstrip("/")
+    return ancora(f"{base}/blob/main/{caminho}" if caminho else base)
 
 
 def evidencia(nome: str, primeira: int = 0, ultima: int | None = None) -> str:
@@ -159,7 +169,9 @@ CORPO = f"""
 
 <h2>12. Links</h2>
 <table><tr><th>Item</th><th>Link</th></tr>
-<tr><td>Repositório GitHub</td><td>{link("REPO_URL")}</td></tr>
+<tr><td>Repositório GitHub</td><td>{link_repo()}</td></tr>
+<tr><td>BPMN (arquivo editável)</td><td>{link_repo("docs/processo_to_be.bpmn")}</td></tr>
+<tr><td>BPMN (imagem)</td><td>{link_repo("assets/fluxo_bpmn.png")}</td></tr>
 <tr><td>Vídeo demonstrativo</td><td>{link("VIDEO_URL")}</td></tr>
 <tr><td>MVP</td><td><a href="https://joaogdiass.github.io/encosta-viva-dados/">https://joaogdiass.github.io/encosta-viva-dados/</a></td></tr></table>
 """
