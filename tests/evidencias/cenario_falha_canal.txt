@@ -1,0 +1,43 @@
+$ py src/main.py ciclo --replay --agora 2026-11-03T14:00
+# Telegram fora do ar: depois de 3 falhas, os envios passam para o SMS simulado.
+
+2026-11-03T14:00  modo=replay  status=concluido_com_falhas
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=16.6mm  fonte=arquivos_airflow
+   S02 Morro da Oficina   Observação -> Atenção       ALERTA    72h=280.2mm  fonte=arquivos_airflow
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=19.1mm  fonte=arquivos_airflow
+   S04 Jardim Ângela      Observação -> Atenção       ALERTA    72h=84.7mm  fonte=arquivos_airflow
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=12.8mm  fonte=arquivos_airflow
+  alertas_criados=2, decisao_igual=3, decisao_subiu=2, descartes=89, envios_ok=60, envios_por_canal_alternativo=24, envios_sms=41, envios_whatsapp=19, setores_processados=5, tentativas_falhas=6
+[operador] incidente_aberto: Canal telegram falhou repetidamente: falha simulada no canal telegram
+
+[código de saída: 0]
+$ py src/main.py ciclo --replay --agora 2026-11-03T15:15
+# Todos os canais fora: o alerta fica na fila do próximo ciclo.
+
+2026-11-03T15:15  modo=replay  status=concluido_com_falhas
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=16.4mm  fonte=arquivos_airflow
+   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=279.5mm  fonte=arquivos_airflow
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=19.2mm  fonte=arquivos_airflow
+   S04 Jardim Ângela      Atenção -> Alerta        ALERTA    72h=105.1mm  fonte=arquivos_airflow
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=11.5mm  fonte=arquivos_airflow
+  alertas_criados=1, chamados_abertos=1, decisao_igual=4, decisao_subiu=1, descartes=90, envios_na_fila=30, setores_processados=5, tentativas_falhas=24
+[operador] incidente_aberto: Canal sms falhou repetidamente: falha simulada no canal sms
+[operador] incidente_aberto: Canal email falhou repetidamente: falha simulada no canal email
+[operador] incidente_aberto: Canal whatsapp falhou repetidamente: falha simulada no canal whatsapp
+
+[código de saída: 0]
+$ py src/main.py ciclo --replay --agora 2026-11-03T15:30
+# Canais de volta: a fila é esvaziada.
+
+2026-11-03T15:30  modo=replay  status=concluido
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=16.4mm  fonte=arquivos_airflow
+   S02 Morro da Oficina   Atenção -> Atenção       sem envio 72h=279.5mm  fonte=arquivos_airflow
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=19.2mm  fonte=arquivos_airflow
+   S04 Jardim Ângela      Alerta -> Alerta        sem envio 72h=106.8mm  fonte=arquivos_airflow
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=11.5mm  fonte=arquivos_airflow
+  decisao_igual=5, descartes=91, envios_ok=30, envios_sms=12, envios_telegram=9, envios_whatsapp=9, setores_processados=5
+[operador] incidente_resolvido: canal_whatsapp: voltou ao normal.
+[operador] incidente_resolvido: canal_sms: voltou ao normal.
+[operador] incidente_resolvido: canal_telegram: voltou ao normal.
+
+[código de saída: 0]

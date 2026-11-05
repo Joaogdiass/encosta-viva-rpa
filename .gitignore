@@ -1,0 +1,11 @@
+.env
+estado/
+estado_*/
+saida/
+quarentena/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Os logs de amostra ficam em logs/amostras/. Os de execução não entram no repositório.
+logs/*.jsonl
+.claude/

@@ -1,0 +1,12 @@
+$ py src/main.py ciclo --replay --agora 2026-10-28T10:00
+# Dia sem chuva forte: nenhum setor muda de nível e ninguém recebe mensagem.
+
+2026-10-28T10:00  modo=replay  status=concluido
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=55.4mm  fonte=arquivos_airflow
+   S02 Morro da Oficina   Observação -> Observação    sem envio 72h=46.3mm  fonte=arquivos_airflow
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=54.8mm  fonte=arquivos_airflow
+   S04 Jardim Ângela      Observação -> Observação    sem envio 72h=16.8mm  fonte=arquivos_airflow
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=21.7mm  fonte=arquivos_airflow
+  decisao_igual=5, descartes=78, setores_processados=5
+
+[código de saída: 0]

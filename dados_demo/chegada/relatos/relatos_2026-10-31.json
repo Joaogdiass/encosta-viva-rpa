@@ -1,0 +1,6 @@
+{"relato_id": "R-30e71d37ed20", "setor_id": "S01", "ts": "2026-10-30T07:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.42, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-64935fa44009", "setor_id": "S01", "ts": "2026-10-30T16:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.77, "confirmado_visao": true, "simulado": true}
+{"relato_id": "R-2f6f96f40f68", "setor_id": "S01", "ts": "2026-10-30T17:10:00", "tipo_sinal": "trinca_solo", "confianca_visao": 0.8, "confirmado_visao": true, "simulado": true}
+{"relato_id": "R-dd36b9a1ddf1", "setor_id": "S01", "ts": "2026-10-30T19:10:00", "tipo_sinal": "arvore_inclinada", "confianca_visao": 0.81, "confirmado_visao": true, "simulado": true}
+{"relato_id": "R-0c68449b2840", "setor_id": "S03", "ts": "2026-10-30T09:10:00", "tipo_sinal": "trinca_solo", "confianca_visao": 0.37, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-4280af614d08", "setor_id": "S99", "ts": "2026-10-30T12:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.5, "confirmado_visao": false, "simulado": true}

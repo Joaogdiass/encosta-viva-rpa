@@ -1,0 +1,4 @@
+{"relato_id": "R-9297e0d1e2f7", "setor_id": "S01", "ts": "2026-10-24T12:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.53, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-a4db48d92254", "setor_id": "S03", "ts": "2026-10-24T17:10:00", "tipo_sinal": "trinca_solo", "confianca_visao": 0.28, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-3fcd1126898d", "setor_id": "S04", "ts": "2026-10-24T15:10:00", "tipo_sinal": "poste_inclinado", "confianca_visao": 0.52, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-a9145ce21b7a", "setor_id": "S99", "ts": "2026-10-24T12:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.5, "confirmado_visao": false, "simulado": true}

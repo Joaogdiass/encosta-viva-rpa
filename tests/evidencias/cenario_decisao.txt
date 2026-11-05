@@ -1,0 +1,10 @@
+$ py src/main.py replay --inicio 2026-11-03T12:00 --fim 2026-11-03T20:30
+# Evento de chuva no Jardim Ângela (S04), ciclo a ciclo, de 15 em 15 minutos.
+2026-11-03T12:00  S02 Morro da Oficina   Observação -> Atenção       ALERTA    72h=278.0mm  fonte=arquivos_airflow
+2026-11-03T14:00  S04 Jardim Ângela      Observação -> Atenção       ALERTA    72h=84.7mm  fonte=arquivos_airflow
+2026-11-03T15:15  S04 Jardim Ângela      Atenção -> Alerta        ALERTA    72h=105.1mm  fonte=arquivos_airflow
+2026-11-03T20:15  S04 Jardim Ângela      Alerta -> Alerta máximo ALERTA    72h=263.8mm  fonte=arquivos_airflow
+
+35 ciclos reproduzidos, 0 com falha geral.
+
+[código de saída: 0]

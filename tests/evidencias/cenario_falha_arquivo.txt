@@ -1,0 +1,14 @@
+$ py src/main.py ciclo --replay --agora 2026-11-03T14:00
+# Arquivo de relatos corrompido: vai para a quarentena e os demais seguem.
+
+2026-11-03T14:00  modo=replay  status=concluido_com_falhas
+   S01 Vila Sahy          Observação -> Observação    sem envio 72h=16.6mm  fonte=arquivos_airflow
+   S02 Morro da Oficina   Observação -> Atenção       ALERTA    72h=280.2mm  fonte=arquivos_airflow
+   S03 Quitandinha        Observação -> Observação    sem envio 72h=19.1mm  fonte=arquivos_airflow
+   S04 Jardim Ângela      Observação -> Atenção       ALERTA    72h=84.7mm  fonte=arquivos_airflow
+   S05 Morro do Algodão   Observação -> Observação    sem envio 72h=12.8mm  fonte=arquivos_airflow
+  alertas_criados=2, decisao_igual=3, decisao_subiu=2, descartes=90, envios_ok=60, envios_sms=17, envios_telegram=24, envios_whatsapp=19, setores_processados=5
+  problema: relatos_2026-11-03.json: nenhum registro válido, enviado à quarentena
+[operador] incidente_aberto: relatos_2026-11-03.json: nenhum registro válido, enviado à quarentena
+
+[código de saída: 0]

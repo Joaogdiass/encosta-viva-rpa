@@ -1,0 +1,2 @@
+{"relato_id": "R-4a0334727de5", "setor_id": "S03", "ts": "2026-11-01T07:10:00", "tipo_sinal": "poste_inclinado", "confianca_visao": 0.3, "confirmado_visao": false, "simulado": true}
+{"relato_id": "R-86e4fa689e77", "setor_id": "S99", "ts": "2026-11-01T12:10:00", "tipo_sinal": "rachadura_parede", "confianca_visao": 0.5, "confirmado_visao": false, "simulado": true}
